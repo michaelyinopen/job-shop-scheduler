@@ -6,7 +6,7 @@ import Example from '../../src'
 class Demo extends Component {
   render() {
     return <div>
-      <h1>job-shop-scheduler Demo</h1>
+      <h1>@michaelyin/job-shop-scheduler Demo</h1>
       <Example/>
     </div>
   }
