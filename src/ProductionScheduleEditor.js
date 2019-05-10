@@ -1,9 +1,11 @@
 import React, { useReducer } from 'react';
 //WithContext
-import TimelineDispatchContext from '../timeline/TimelineDispatchContext';
-import TimelineStateContext from '../timeline/TimelineStateContext';
-import TimelineGroupsStateContext from '../timeline/TimelineGroupsStateContext';
-import TimelineItemsStateContext from '../timeline/TimelineItemsStateContext';
+import {
+  TimelineDispatchContext,
+  TimelineStateContext,
+  TimelineGroupsStateContext,
+  TimelineItemsStateContext,
+} from '@michaelyin/timeline';
 
 import productionReducer, { init as productionInit } from './store/reducer';
 import {
@@ -17,11 +19,13 @@ import { usePreviewAppliedTimelineItems } from './store/useSelector';
 import ProductionDispatchContext from './ProductionDispatchContext';
 import ProductionStateContext from './ProductionStateContext';
 //Presentation
-import ControlledTimeContainer from '../timeline/ControlledTimeContainer';
-import TimelineContent from '../timeline/TimelineContent';
-import GroupAxis from '../timeline/GroupAxis';
-import ScheduleContainer from '../timeline/ScheduleContainer';
-import TimeAxis from '../timeline/TimeAxis';
+import {
+  ControlledTimeline,
+  TimelineContent,
+  GroupAxis,
+  ScheduleContainer,
+  TimeAxis,
+} from '@michaelyin/timeline';
 import ProductionTask from './ProductionTask';
 import MachineLane from './MachineLane';
 
@@ -35,7 +39,7 @@ const ProductionScheuldeEditor = React.memo(() => {
       <ProductionToolbar />
       <ProductionJobSet />
       <br />
-      <ControlledTimeContainer
+      <ControlledTimeline
         itemComponent={ProductionTask}
         groupComponent={MachineLane}
       >
@@ -44,7 +48,7 @@ const ProductionScheuldeEditor = React.memo(() => {
           <ScheduleContainer />
         </TimelineContent>
         <TimeAxis />
-      </ControlledTimeContainer>
+      </ControlledTimeline>
     </React.Fragment>
   );
 });

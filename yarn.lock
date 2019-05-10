@@ -927,6 +927,17 @@
     prop-types "^15.6.0"
     react-is "^16.6.3"
 
+"@michaelyin/timeline@file:../timeline/michaelyin-timeline-v1.0.0.tgz":
+  version "1.0.0"
+  resolved "file:../timeline/michaelyin-timeline-v1.0.0.tgz#bcf79c8dc2c7db7bc4198d77e0119e4ea7baee1c"
+  dependencies:
+    classnames "^2.2.6"
+    date-fns "2.0.0-alpha.27"
+    lodash "^4.17.11"
+    memoize-one "^5.0.4"
+    react-resize-detector "^4.1.3"
+    redux "^4.0.1"
+
 "@types/babel__core@^7.1.0":
   version "7.1.1"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.1.tgz#ce9a9e5d92b7031421e1d0d74ae59f572ba48be6"
@@ -8732,6 +8743,13 @@ react-deep-force-update@^1.0.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/react-deep-force-update/-/react-deep-force-update-1.1.2.tgz#3d2ae45c2c9040cbb1772be52f8ea1ade6ca2ee1"
   integrity sha512-WUSQJ4P/wWcusaH+zZmbECOk7H5N2pOIl0vzheeornkIMhu+qrNdGFm0bDZLCb0hSF0jf/kH1SgkNGfBdTc4wA==
+
+react-dnd-html5-backend@^7.4.4:
+  version "7.4.4"
+  resolved "https://registry.yarnpkg.com/react-dnd-html5-backend/-/react-dnd-html5-backend-7.4.4.tgz#3372e5af4af24f680cd75900c782606539c01220"
+  integrity sha512-X/lP92ateY0glHan8mU0JzjBuZL6VHv2Gc/H9OBBxaf/ZCN1oC16MLKdesqG4x1f/NWFTNtuG3W4B99r5gPVog==
+  dependencies:
+    dnd-core "^7.4.4"
 
 react-dnd@^7.4.5:
   version "7.4.5"

@@ -21,6 +21,7 @@
     "coverage:watch": "jest --coverage --watch"
   },
   "dependencies": {
+    "@michaelyin/timeline": "C:\\Users\\cheung\\Desktop\\Scheduling\\timeline\\michaelyin-timeline-v1.0.0.tgz",
     "classnames": "^2.2.6",
     "date-fns": "2.0.0-alpha.27",
     "lodash": "^4.17.11",
@@ -48,6 +49,7 @@
     "jest": "^24.8.0",
     "nwb": "0.23.x",
     "react": "^16.8.6",
+    "react-dnd-html5-backend": "^7.4.4",
     "react-dom": "^16.8.6",
     "react-test-renderer": "^16.8.6"
   },

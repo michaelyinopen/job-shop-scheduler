@@ -2,7 +2,7 @@ import { useContext, useMemo } from 'react';
 import ProductionStateContext from '../ProductionStateContext';
 import { addMilliseconds } from 'date-fns/fp';
 import { memoize } from 'lodash';
-import { itemInitialState as timelineItemInitialState } from '../../timeline/store/reducer';
+import { itemInitialState as timelineItemInitialState } from '@michaelyin/timeline';
 import { proceduresSelector, previewTasksSelector } from './selectors';
 import { originalTaskMode } from './reducer';
 

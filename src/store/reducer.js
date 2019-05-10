@@ -27,7 +27,7 @@ import {
 import {
   bareTimelineReducer,
   initBareState as initTimelineBareState,
-} from '../../timeline/store/reducer';
+} from '@michaelyin/timeline';
 import { proceduresSelector } from './selectors';
 import getNewColor from './jobColor';
 

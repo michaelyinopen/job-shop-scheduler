@@ -2,8 +2,7 @@ import { useContext, useMemo, useCallback, useEffect } from 'react';
 import { differenceInMilliseconds } from 'date-fns/fp';
 import { throttle } from 'lodash';
 import { previewThrottleWait } from '../constants';
-import { useMinTime } from '../../timeline/store/useSelector';
-import { useScheduleElementTimeFunc } from '../../timeline/store/lengthTime';
+import { useMinTime, useLeftToTimeFunc } from '@michaelyin/timeline';
 
 import ProductionDispatchContext from '../ProductionDispatchContext';
 import {
@@ -37,11 +36,11 @@ export const useSetIsDragging = () => {
 
 export const useMoveProcedureToMacheineLane = () => {
   const dispatch = useContext(ProductionDispatchContext);
-  const scheduleElementTimeFunc = useScheduleElementTimeFunc();
+  const leftToTimeFunc = useLeftToTimeFunc();
   const minTime = useMinTime();
   const moveProcedureToMacheineLane = useMemo(
     () => (procedureId, posXOnMachineLane) => {
-      const start = scheduleElementTimeFunc(posXOnMachineLane);
+      const start = leftToTimeFunc(posXOnMachineLane);
       const millisecondsFromStart = differenceInMilliseconds(minTime)(start);
       const roundedMillisecondsFromStart = roundToMinute(millisecondsFromStart);
       dispatch(createTask({
@@ -49,7 +48,7 @@ export const useMoveProcedureToMacheineLane = () => {
         millisecondsFromStart: roundedMillisecondsFromStart,
       }));
     },
-    [dispatch, scheduleElementTimeFunc, minTime]
+    [dispatch, leftToTimeFunc, minTime]
   );
   return moveProcedureToMacheineLane;
 };
@@ -59,11 +58,11 @@ export const useMoveProcedureToMacheineLane = () => {
 // maybe undo custom filter
 export const useMoveTaskOnMacheineLane = () => {
   const dispatch = useContext(ProductionDispatchContext);
-  const scheduleElementTimeFunc = useScheduleElementTimeFunc();
+  const leftToTimeFunc = useLeftToTimeFunc();
   const minTime = useMinTime();
   const moveProcedureToMacheineLane = useMemo(
     () => (procedureId, posXOnMachineLane) => {
-      const start = scheduleElementTimeFunc(posXOnMachineLane);
+      const start = leftToTimeFunc(posXOnMachineLane);
       const millisecondsFromStart = differenceInMilliseconds(minTime)(start);
       const roundedMillisecondsFromStart = roundToMinute(millisecondsFromStart);
       dispatch(updateTask(
@@ -74,7 +73,7 @@ export const useMoveTaskOnMacheineLane = () => {
         }
       ));
     },
-    [dispatch, scheduleElementTimeFunc, minTime]
+    [dispatch, leftToTimeFunc, minTime]
   );
   return moveProcedureToMacheineLane;
 };
@@ -92,11 +91,11 @@ export const useRemoveTask = () => {
 
 export const usePreviewAssignProcedure = () => {
   const dispatch = useContext(ProductionDispatchContext);
-  const scheduleElementTimeFunc = useScheduleElementTimeFunc();
+  const leftToTimeFunc = useLeftToTimeFunc();
   const minTime = useMinTime();
   const previewAssignProcedureCallback = useMemo(
     () => (procedureId, posXOnMachineLane) => {
-      const start = scheduleElementTimeFunc(posXOnMachineLane);
+      const start = leftToTimeFunc(posXOnMachineLane);
       const millisecondsFromStart = differenceInMilliseconds(minTime)(start);
       const roundedMillisecondsFromStart = roundToMinute(millisecondsFromStart);
       dispatch(previewAssignProcedure(
@@ -104,7 +103,7 @@ export const usePreviewAssignProcedure = () => {
         roundedMillisecondsFromStart,
       ));
     },
-    [dispatch, scheduleElementTimeFunc, minTime]
+    [dispatch, leftToTimeFunc, minTime]
   );
 
   const previewAssignProcedureThrottled = useCallback(
@@ -130,11 +129,11 @@ export const usePreviewAssignProcedure = () => {
 
 export const usePreviewMoveTask = () => {
   const dispatch = useContext(ProductionDispatchContext);
-  const scheduleElementTimeFunc = useScheduleElementTimeFunc();
+  const leftToTimeFunc = useLeftToTimeFunc();
   const minTime = useMinTime();
   const previewMoveTaskCallback = useMemo(
     () => (procedureId, posXOnMachineLane) => {
-      const start = scheduleElementTimeFunc(posXOnMachineLane);
+      const start = leftToTimeFunc(posXOnMachineLane);
       const millisecondsFromStart = differenceInMilliseconds(minTime)(start);
       const roundedMillisecondsFromStart = roundToMinute(millisecondsFromStart);
       dispatch(previewMoveTask(
@@ -142,7 +141,7 @@ export const usePreviewMoveTask = () => {
         roundedMillisecondsFromStart,
       ));
     },
-    [dispatch, scheduleElementTimeFunc, minTime]
+    [dispatch, leftToTimeFunc, minTime]
   );
 
   const previewMoveTaskThrottled = useCallback(

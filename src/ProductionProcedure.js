@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import { DragSource } from 'react-dnd';
 import { useSetIsDragging } from './store/useActionsDispatchers';
-import { useMillisecondsToLengthFunc } from '../timeline/store/lengthTime';
+import { useDurationToLengthFunc } from '@michaelyin/timeline';
 import itemTypes from './dragDrop/itemTypes';
 
 import usePopperHandlers from './usePopperHandlers';
@@ -85,8 +85,8 @@ const ProductionProcedureContainer = ({
   const setIsDragging = useSetIsDragging();
   const procedure = useProcedure(id);
   const [backgroundColor, foregroundColor] = useJobColor(procedure.jobId);
-  const millisecondsToLengthFunc = useMillisecondsToLengthFunc();
-  const width = millisecondsToLengthFunc(procedure.processingMilliseconds);
+  const durationToLengthFunc = useDurationToLengthFunc();
+  const width = durationToLengthFunc(procedure.processingMilliseconds);
   const [
     anchorElement,
     open,

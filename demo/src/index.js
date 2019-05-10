@@ -1,5 +1,7 @@
-import React, { Component } from 'react'
-import { render } from 'react-dom'
+import React, { Component } from 'react';
+import { render } from 'react-dom';
+import { DragDropContextProvider } from 'react-dnd';
+import html5Backend from 'react-dnd-html5-backend';
 
 import { ProductionScheduleEditor } from '../../src'
 
@@ -50,15 +52,19 @@ const jobs = [
 
 class Demo extends Component {
   render() {
-    return <div>
-      <h1>@michaelyin/job-shop-scheduler Demo</h1>
-      <ProductionScheduleEditor
-        timeOptions={timeOptions}
-        referenceDate={referenceDate}
-        machines={machines}
-        jobs={jobs}
-      />
-    </div>
+    return (
+      <DragDropContextProvider backend={html5Backend}>
+        <div>
+          <h1>@michaelyin/job-shop-scheduler Demo</h1>
+          <ProductionScheduleEditor
+            timeOptions={timeOptions}
+            referenceDate={referenceDate}
+            machines={machines}
+            jobs={jobs}
+          />
+        </div>
+      </DragDropContextProvider>
+    );
   }
 }
 
