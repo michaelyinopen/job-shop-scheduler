@@ -4,6 +4,7 @@ import { DragDropContextProvider } from 'react-dnd';
 import html5Backend from 'react-dnd-html5-backend';
 
 import { ProductionScheduleEditor } from '../../src'
+import '../css/index.css';
 
 const referenceDate = new Date(2019, 0, 1);
 
