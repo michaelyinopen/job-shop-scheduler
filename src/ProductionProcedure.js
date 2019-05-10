@@ -9,7 +9,7 @@ import CustomPopper from './CustomPopper';
 
 import { useProcedure, useJobColor } from './store/useSelector';
 import classNames from 'classnames/bind';
-import productionStyles from './Production.module.css';
+import productionStyles from '../css/Production.module.css';
 
 const cx = classNames.bind(productionStyles);
 

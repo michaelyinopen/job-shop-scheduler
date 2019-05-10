@@ -4,7 +4,7 @@ import itemTypes from './dragDrop/itemTypes';
 import dropResultTypes from './dragDrop/dropResultTypes';
 
 import classNames from 'classnames/bind';
-import productionStyles from './Production.module.css';
+import productionStyles from '../css/Production.module.css';
 import useLeftAtBeginDrag from './store/useLeftAtBeginDrag';
 import {
   useMoveProcedureToMacheineLane,

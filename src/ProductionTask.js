@@ -12,7 +12,7 @@ import { Error as ErrorIcon, ExpandLess } from '@material-ui/icons';
 import { Fab, IconButton } from '@material-ui/core';
 
 import classNames from 'classnames/bind';
-import productionStyles from './Production.module.css';
+import productionStyles from '../css/Production.module.css';
 import useTaskFeasible from './store/useTaskFeasible';
 
 const cx = classNames.bind(productionStyles);

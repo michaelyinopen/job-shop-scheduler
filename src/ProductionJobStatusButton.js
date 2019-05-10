@@ -7,7 +7,7 @@ import { Tooltip } from '@material-ui/core';
 import ProductionJobButton from './ProductionJobButton';
 
 import classNames from 'classnames/bind';
-import productionStyles from './Production.module.css';
+import productionStyles from '../css/Production.module.css';
 
 const cx = classNames.bind(productionStyles);
 

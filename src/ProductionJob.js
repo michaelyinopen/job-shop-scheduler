@@ -5,7 +5,7 @@ import ProductionJobOptionsButton from './ProductionJobOptionsButton';
 import ProductionJobStatusButton from './ProductionJobStatusButton';
 
 import classNames from 'classnames/bind';
-import productionStyles from './Production.module.css';
+import productionStyles from '../css/Production.module.css';
 
 const cx = classNames.bind(productionStyles);
 

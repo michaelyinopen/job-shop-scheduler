@@ -5,7 +5,7 @@ import { Undo as UndoIcon, Redo as RedoIcon } from '@material-ui/icons';
 import IconButton from '@material-ui/core/IconButton';
 import ProductionDispatchContext from './ProductionDispatchContext';
 import classNames from 'classnames/bind';
-import productionStyles from './Production.module.css';
+import productionStyles from '../css/Production.module.css';
 import { useCanUndo, useCanRedo } from './store/useSelector';
 
 const cx = classNames.bind(productionStyles);

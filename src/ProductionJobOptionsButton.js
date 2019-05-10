@@ -8,7 +8,7 @@ import ProductionJobButton from './ProductionJobButton';
 import { useChangeJobColor } from './store/useActionsDispatchers';
 
 import classNames from 'classnames/bind';
-import productionStyles from './Production.module.css';
+import productionStyles from '../css/Production.module.css';
 
 const cx = classNames.bind(productionStyles);
 
