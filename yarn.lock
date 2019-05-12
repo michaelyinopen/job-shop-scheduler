@@ -927,6 +927,17 @@
     prop-types "^15.6.0"
     react-is "^16.6.3"
 
+"@michaelyin/timeline@C:\\Users\\cheung\\Desktop\\Scheduling\\timeline\\michaelyin-timeline-v1.0.1.tgz":
+  version "1.0.1"
+  resolved "C:\\Users\\cheung\\Desktop\\Scheduling\\timeline\\michaelyin-timeline-v1.0.1.tgz#296303e0ef12346cea9772b2ec1944bde2a95cd0"
+  dependencies:
+    classnames "^2.2.6"
+    date-fns "2.0.0-alpha.27"
+    lodash "^4.17.11"
+    memoize-one "^5.0.4"
+    react-resize-detector "^4.1.3"
+    redux "^4.0.1"
+
 "@michaelyin/timeline@file:../timeline/michaelyin-timeline-v1.0.0.tgz":
   version "1.0.0"
   resolved "file:../timeline/michaelyin-timeline-v1.0.0.tgz#bcf79c8dc2c7db7bc4198d77e0119e4ea7baee1c"

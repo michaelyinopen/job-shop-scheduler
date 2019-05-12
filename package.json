@@ -21,7 +21,7 @@
     "coverage:watch": "jest --coverage --watch"
   },
   "dependencies": {
-    "@michaelyin/timeline": "C:\\Users\\cheung\\Desktop\\Scheduling\\timeline\\michaelyin-timeline-v1.0.0.tgz",
+    "@michaelyin/timeline": "C:\\Users\\cheung\\Desktop\\Scheduling\\timeline\\michaelyin-timeline-v1.0.1.tgz",
     "classnames": "^2.2.6",
     "date-fns": "2.0.0-alpha.27",
     "lodash": "^4.17.11",
