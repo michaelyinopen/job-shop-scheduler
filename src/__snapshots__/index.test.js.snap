@@ -1,9 +1,1329 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Matches snapshot 1`] = `
-<div>
-  <h2>
-    Welcome to React components
-  </h2>
-</div>
+Array [
+  <div
+    className="job-shop__toolbar"
+  >
+    <button
+      className="MuiButtonBase-root-7 MuiButtonBase-disabled-8 MuiIconButton-root-1 MuiIconButton-disabled-5"
+      disabled={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onContextMenu={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "height": 36,
+          "padding": 6,
+          "width": 36,
+        }
+      }
+      tabIndex="-1"
+      type="button"
+    >
+      <span
+        className="MuiIconButton-label-6"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-10"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M12.5 8c-2.65 0-5.05.99-6.9 2.6L2 7v9h9l-3.62-3.62c1.39-1.16 3.16-1.88 5.12-1.88 3.54 0 6.55 2.31 7.6 5.5l2.37-.78C21.08 11.03 17.15 8 12.5 8z"
+          />
+        </svg>
+      </span>
+    </button>
+    <button
+      className="MuiButtonBase-root-7 MuiButtonBase-disabled-8 MuiIconButton-root-1 MuiIconButton-disabled-5"
+      disabled={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onContextMenu={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      style={
+        Object {
+          "height": 36,
+          "padding": 6,
+          "width": 36,
+        }
+      }
+      tabIndex="-1"
+      type="button"
+    >
+      <span
+        className="MuiIconButton-label-6"
+      >
+        <svg
+          aria-hidden="true"
+          className="MuiSvgIcon-root-10"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M18.4 10.6C16.55 8.99 14.15 8 11.5 8c-4.65 0-8.58 3.03-9.96 7.22L3.9 16c1.05-3.19 4.05-5.5 7.6-5.5 1.95 0 3.73.72 5.12 1.88L13 16h9V7l-3.6 3.6z"
+          />
+        </svg>
+      </span>
+    </button>
+  </div>,
+  <ol
+    className="job-shop__job-set-list"
+  >
+    <li>
+      <section
+        className="job-shop__job-section"
+      >
+        <div
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <button
+            aria-describedby={null}
+            className="MuiButtonBase-root-7 MuiIconButton-root-1"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "padding": 5,
+              }
+            }
+            tabIndex="0"
+            title="Job options"
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label-6"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-10"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                />
+              </svg>
+            </span>
+            <span
+              className="MuiTouchRipple-root-27"
+            />
+          </button>
+        </div>
+        <div
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <button
+            aria-describedby={null}
+            className="MuiButtonBase-root-7 MuiIconButton-root-1"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "padding": 5,
+              }
+            }
+            tabIndex="0"
+            title="Not all assigned"
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label-6"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-10"
+                focusable="false"
+                role="presentation"
+                style={
+                  Object {
+                    "color": "lightgrey",
+                  }
+                }
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </span>
+            <span
+              className="MuiTouchRipple-root-27"
+            />
+          </button>
+        </div>
+        <h3
+          className="job-shop__job-header"
+        >
+          Job
+          <span
+            className="job-shop__job-header-color-box"
+            style={
+              Object {
+                "backgroundColor": "#3cb44b",
+                "color": "#000000",
+              }
+            }
+          >
+            1
+          </span>
+          :
+        </h3>
+        <ol
+          className="job-shop__procedures"
+        >
+          <li>
+            <div
+              className="job-shop__procedure"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#3cb44b",
+                  "width": "0px",
+                }
+              }
+            >
+              <div
+                className="job-shop__machine-label"
+              >
+                M
+                1
+              </div>
+              <div
+                className="job-shop__job-label"
+                style={
+                  Object {
+                    "color": "#000000",
+                  }
+                }
+              >
+                1
+              </div>
+              <div
+                className="job-shop__sequence-label"
+              >
+                1
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              className="job-shop__procedure"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#3cb44b",
+                  "width": "0px",
+                }
+              }
+            >
+              <div
+                className="job-shop__machine-label"
+              >
+                M
+                2
+              </div>
+              <div
+                className="job-shop__job-label"
+                style={
+                  Object {
+                    "color": "#000000",
+                  }
+                }
+              >
+                1
+              </div>
+              <div
+                className="job-shop__sequence-label"
+              >
+                2
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              className="job-shop__procedure"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#3cb44b",
+                  "width": "0px",
+                }
+              }
+            >
+              <div
+                className="job-shop__machine-label"
+              >
+                M
+                3
+              </div>
+              <div
+                className="job-shop__job-label"
+                style={
+                  Object {
+                    "color": "#000000",
+                  }
+                }
+              >
+                1
+              </div>
+              <div
+                className="job-shop__sequence-label"
+              >
+                3
+              </div>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </li>
+    <li>
+      <section
+        className="job-shop__job-section"
+      >
+        <div
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <button
+            aria-describedby={null}
+            className="MuiButtonBase-root-7 MuiIconButton-root-1"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "padding": 5,
+              }
+            }
+            tabIndex="0"
+            title="Job options"
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label-6"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-10"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                />
+              </svg>
+            </span>
+            <span
+              className="MuiTouchRipple-root-27"
+            />
+          </button>
+        </div>
+        <div
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <button
+            aria-describedby={null}
+            className="MuiButtonBase-root-7 MuiIconButton-root-1"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "padding": 5,
+              }
+            }
+            tabIndex="0"
+            title="Not all assigned"
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label-6"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-10"
+                focusable="false"
+                role="presentation"
+                style={
+                  Object {
+                    "color": "lightgrey",
+                  }
+                }
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </span>
+            <span
+              className="MuiTouchRipple-root-27"
+            />
+          </button>
+        </div>
+        <h3
+          className="job-shop__job-header"
+        >
+          Job
+          <span
+            className="job-shop__job-header-color-box"
+            style={
+              Object {
+                "backgroundColor": "#ffe119",
+                "color": "#000000",
+              }
+            }
+          >
+            2
+          </span>
+          :
+        </h3>
+        <ol
+          className="job-shop__procedures"
+        >
+          <li>
+            <div
+              className="job-shop__procedure"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#ffe119",
+                  "width": "0px",
+                }
+              }
+            >
+              <div
+                className="job-shop__machine-label"
+              >
+                M
+                2
+              </div>
+              <div
+                className="job-shop__job-label"
+                style={
+                  Object {
+                    "color": "#000000",
+                  }
+                }
+              >
+                2
+              </div>
+              <div
+                className="job-shop__sequence-label"
+              >
+                1
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              className="job-shop__procedure"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#ffe119",
+                  "width": "0px",
+                }
+              }
+            >
+              <div
+                className="job-shop__machine-label"
+              >
+                M
+                1
+              </div>
+              <div
+                className="job-shop__job-label"
+                style={
+                  Object {
+                    "color": "#000000",
+                  }
+                }
+              >
+                2
+              </div>
+              <div
+                className="job-shop__sequence-label"
+              >
+                2
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              className="job-shop__procedure"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#ffe119",
+                  "width": "0px",
+                }
+              }
+            >
+              <div
+                className="job-shop__machine-label"
+              >
+                M
+                4
+              </div>
+              <div
+                className="job-shop__job-label"
+                style={
+                  Object {
+                    "color": "#000000",
+                  }
+                }
+              >
+                2
+              </div>
+              <div
+                className="job-shop__sequence-label"
+              >
+                3
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              className="job-shop__procedure"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#ffe119",
+                  "width": "0px",
+                }
+              }
+            >
+              <div
+                className="job-shop__machine-label"
+              >
+                M
+                3
+              </div>
+              <div
+                className="job-shop__job-label"
+                style={
+                  Object {
+                    "color": "#000000",
+                  }
+                }
+              >
+                2
+              </div>
+              <div
+                className="job-shop__sequence-label"
+              >
+                4
+              </div>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </li>
+    <li>
+      <section
+        className="job-shop__job-section"
+      >
+        <div
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <button
+            aria-describedby={null}
+            className="MuiButtonBase-root-7 MuiIconButton-root-1"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "padding": 5,
+              }
+            }
+            tabIndex="0"
+            title="Job options"
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label-6"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-10"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+                <path
+                  d="M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+                />
+              </svg>
+            </span>
+            <span
+              className="MuiTouchRipple-root-27"
+            />
+          </button>
+        </div>
+        <div
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <button
+            aria-describedby={null}
+            className="MuiButtonBase-root-7 MuiIconButton-root-1"
+            disabled={false}
+            onBlur={[Function]}
+            onClick={[Function]}
+            onContextMenu={[Function]}
+            onFocus={[Function]}
+            onKeyDown={[Function]}
+            onKeyUp={[Function]}
+            onMouseDown={[Function]}
+            onMouseLeave={[Function]}
+            onMouseOver={[Function]}
+            onMouseUp={[Function]}
+            onTouchEnd={[Function]}
+            onTouchMove={[Function]}
+            onTouchStart={[Function]}
+            style={
+              Object {
+                "padding": 5,
+              }
+            }
+            tabIndex="0"
+            title="Not all assigned"
+            type="button"
+          >
+            <span
+              className="MuiIconButton-label-6"
+            >
+              <svg
+                aria-hidden="true"
+                className="MuiSvgIcon-root-10"
+                focusable="false"
+                role="presentation"
+                style={
+                  Object {
+                    "color": "lightgrey",
+                  }
+                }
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </span>
+            <span
+              className="MuiTouchRipple-root-27"
+            />
+          </button>
+        </div>
+        <h3
+          className="job-shop__job-header"
+        >
+          Job
+          <span
+            className="job-shop__job-header-color-box"
+            style={
+              Object {
+                "backgroundColor": "#4363d8",
+                "color": "#ffffff",
+              }
+            }
+          >
+            3
+          </span>
+          :
+        </h3>
+        <ol
+          className="job-shop__procedures"
+        >
+          <li>
+            <div
+              className="job-shop__procedure"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#4363d8",
+                  "width": "0px",
+                }
+              }
+            >
+              <div
+                className="job-shop__machine-label"
+              >
+                M
+                1
+              </div>
+              <div
+                className="job-shop__job-label"
+                style={
+                  Object {
+                    "color": "#ffffff",
+                  }
+                }
+              >
+                3
+              </div>
+              <div
+                className="job-shop__sequence-label"
+              >
+                1
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              className="job-shop__procedure"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#4363d8",
+                  "width": "0px",
+                }
+              }
+            >
+              <div
+                className="job-shop__machine-label"
+              >
+                M
+                2
+              </div>
+              <div
+                className="job-shop__job-label"
+                style={
+                  Object {
+                    "color": "#ffffff",
+                  }
+                }
+              >
+                3
+              </div>
+              <div
+                className="job-shop__sequence-label"
+              >
+                2
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              className="job-shop__procedure"
+              onMouseEnter={[Function]}
+              onMouseLeave={[Function]}
+              style={
+                Object {
+                  "backgroundColor": "#4363d8",
+                  "width": "0px",
+                }
+              }
+            >
+              <div
+                className="job-shop__machine-label"
+              >
+                M
+                4
+              </div>
+              <div
+                className="job-shop__job-label"
+                style={
+                  Object {
+                    "color": "#ffffff",
+                  }
+                }
+              >
+                3
+              </div>
+              <div
+                className="job-shop__sequence-label"
+              >
+                3
+              </div>
+            </div>
+          </li>
+        </ol>
+      </section>
+    </li>
+  </ol>,
+  <br />,
+  <div
+    className="timeline__time-container"
+  >
+    <div
+      className="timeline__group-axis"
+    >
+      <ol
+        className="timeline__list--none-style"
+      >
+        <li>
+          <div
+            className="timeline__group-header-wrapper"
+            style={
+              Object {
+                "height": "nullpx",
+              }
+            }
+          >
+            <div
+              aria-describedby={null}
+              className="timeline__group-header"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              title="Machine 1"
+            >
+              M1
+            </div>
+          </div>
+        </li>
+        <li>
+          <div
+            className="timeline__group-header-wrapper"
+            style={
+              Object {
+                "height": "nullpx",
+              }
+            }
+          >
+            <div
+              aria-describedby={null}
+              className="timeline__group-header"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              title="Machine 2"
+            >
+              M2
+            </div>
+          </div>
+        </li>
+        <li>
+          <div
+            className="timeline__group-header-wrapper"
+            style={
+              Object {
+                "height": "nullpx",
+              }
+            }
+          >
+            <div
+              aria-describedby={null}
+              className="timeline__group-header"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              title="Machine 3"
+            >
+              M3
+            </div>
+          </div>
+        </li>
+        <li>
+          <div
+            className="timeline__group-header-wrapper"
+            style={
+              Object {
+                "height": "nullpx",
+              }
+            }
+          >
+            <div
+              aria-describedby={null}
+              className="timeline__group-header"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onMouseLeave={[Function]}
+              onMouseOver={[Function]}
+              onTouchEnd={[Function]}
+              onTouchStart={[Function]}
+              title="Machine 4"
+            >
+              M4
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div
+      className="timeline__slide-container timeline__schedule-container"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onWheel={[Function]}
+    >
+      <div />
+      <div
+        className="timeline__schedule-slide"
+        onMouseDown={[Function]}
+        style={
+          Object {
+            "transform": "translate(0px,0px)",
+            "width": 0,
+          }
+        }
+      >
+        <ol
+          className="timeline__groups timeline__list--none-style"
+        >
+          <li>
+            <div
+              className="timeline__group-wrapper"
+            >
+              <div />
+              <div
+                className="job-shop__machine-lane"
+              >
+                <ol
+                  className="timeline__items timeline__list--none-style"
+                  style={
+                    Object {
+                      "height": 28,
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              className="timeline__group-wrapper"
+            >
+              <div />
+              <div
+                className="job-shop__machine-lane"
+              >
+                <ol
+                  className="timeline__items timeline__list--none-style"
+                  style={
+                    Object {
+                      "height": 28,
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              className="timeline__group-wrapper"
+            >
+              <div />
+              <div
+                className="job-shop__machine-lane"
+              >
+                <ol
+                  className="timeline__items timeline__list--none-style"
+                  style={
+                    Object {
+                      "height": 28,
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </li>
+          <li>
+            <div
+              className="timeline__group-wrapper"
+            >
+              <div />
+              <div
+                className="job-shop__machine-lane"
+              >
+                <ol
+                  className="timeline__items timeline__list--none-style"
+                  style={
+                    Object {
+                      "height": 28,
+                    }
+                  }
+                />
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </div>
+    <div
+      className="timeline__time-axis timeline__slide-container"
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onWheel={[Function]}
+    >
+      <div
+        className="timeline__time-axis-slide"
+        onMouseDown={[Function]}
+        style={
+          Object {
+            "transform": "translate(0px,0px)",
+            "width": 0,
+          }
+        }
+      >
+        <svg
+          className="timeline__time-axis-svg"
+        >
+          <line
+            className="timeline__time-axis-line"
+            x1="0%"
+            x2="100%"
+            y1="0"
+            y2="0"
+          />
+          <line
+            className="timeline__major-tick-mark"
+            x1="0px"
+            x2="0px"
+            y1="0"
+            y2="16px"
+          />
+          <line
+            className="timeline__minor-tick-mark"
+            x1="0px"
+            x2="0px"
+            y1="0"
+            y2="8px"
+          />
+          <line
+            className="timeline__major-tick-mark"
+            x1="0px"
+            x2="0px"
+            y1="0"
+            y2="16px"
+          />
+          <line
+            className="timeline__minor-tick-mark"
+            x1="0px"
+            x2="0px"
+            y1="0"
+            y2="8px"
+          />
+          <line
+            className="timeline__major-tick-mark"
+            x1="0px"
+            x2="0px"
+            y1="0"
+            y2="16px"
+          />
+          <line
+            className="timeline__minor-tick-mark"
+            x1="0px"
+            x2="0px"
+            y1="0"
+            y2="8px"
+          />
+          <line
+            className="timeline__major-tick-mark"
+            x1="0px"
+            x2="0px"
+            y1="0"
+            y2="16px"
+          />
+          <line
+            className="timeline__minor-tick-mark"
+            x1="0px"
+            x2="0px"
+            y1="0"
+            y2="8px"
+          />
+          <line
+            className="timeline__major-tick-mark"
+            x1="0px"
+            x2="0px"
+            y1="0"
+            y2="16px"
+          />
+          <line
+            className="timeline__minor-tick-mark"
+            x1="0px"
+            x2="0px"
+            y1="0"
+            y2="8px"
+          />
+          <line
+            className="timeline__major-tick-mark"
+            x1="0px"
+            x2="0px"
+            y1="0"
+            y2="16px"
+          />
+          <line
+            className="timeline__minor-tick-mark"
+            x1="0px"
+            x2="0px"
+            y1="0"
+            y2="8px"
+          />
+          <line
+            className="timeline__major-tick-mark"
+            x1="0px"
+            x2="0px"
+            y1="0"
+            y2="16px"
+          />
+          <text
+            alignmentBaseline="hanging"
+            dx="2px"
+            dy="2px"
+            fill="black"
+            x="0px"
+          >
+            00:00
+          </text>
+          <text
+            alignmentBaseline="hanging"
+            dx="2px"
+            dy="2px"
+            fill="black"
+            x="0px"
+          >
+            00:10
+          </text>
+          <text
+            alignmentBaseline="hanging"
+            dx="2px"
+            dy="2px"
+            fill="black"
+            x="0px"
+          >
+            00:20
+          </text>
+          <text
+            alignmentBaseline="hanging"
+            dx="2px"
+            dy="2px"
+            fill="black"
+            x="0px"
+          >
+            00:30
+          </text>
+          <text
+            alignmentBaseline="hanging"
+            dx="2px"
+            dy="2px"
+            fill="black"
+            x="0px"
+          >
+            00:40
+          </text>
+          <text
+            alignmentBaseline="hanging"
+            dx="2px"
+            dy="2px"
+            fill="black"
+            x="0px"
+          >
+            00:50
+          </text>
+          <text
+            alignmentBaseline="hanging"
+            dx="2px"
+            dy="2px"
+            fill="black"
+            x="0px"
+          >
+            01:00
+          </text>
+        </svg>
+      </div>
+      <ol
+        className="timeline__time-axis-labels timeline__list--none-style"
+      >
+        <li>
+          <div
+            className="timeline__time-axis-label-dot"
+            style={
+              Object {
+                "transform": "translateX(0px) translate(-50%, -50%)",
+              }
+            }
+          />
+          <div
+            className="timeline__time-axis-label-time-connection"
+            style={
+              Object {
+                "transform": "translateX(0px) translateX(-50%)",
+              }
+            }
+          />
+          <div
+            className="timeline__time-axis-time-label"
+            style={
+              Object {
+                "transform": "translateX(0px) translateX(0px)",
+                "width": "48px",
+              }
+            }
+          >
+            00:00
+          </div>
+        </li>
+        <li>
+          <div
+            className="timeline__time-axis-label-dot"
+            style={
+              Object {
+                "transform": "translateX(0px) translate(-50%, -50%)",
+              }
+            }
+          />
+          <div
+            className="timeline__time-axis-label-time-connection"
+            style={
+              Object {
+                "transform": "translateX(0px) translateX(-50%)",
+              }
+            }
+          />
+          <div
+            className="timeline__time-axis-time-label"
+            style={
+              Object {
+                "transform": "translateX(0px) translateX(0px)",
+                "width": "48px",
+              }
+            }
+          >
+            01:00
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>,
+]
 `;

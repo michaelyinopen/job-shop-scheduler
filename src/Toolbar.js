@@ -3,17 +3,17 @@ import React, { useContext, useCallback } from 'react';
 import { ActionCreators } from 'redux-undo';
 import { Undo as UndoIcon, Redo as RedoIcon } from '@material-ui/icons';
 import IconButton from '@material-ui/core/IconButton';
-import ProductionDispatchContext from './ProductionDispatchContext';
-import classNames from 'classnames/bind';
-import productionStyles from '../css/Production.module.css';
+import JobShopDispatchContext from './JobShopDispatchContext';
 import { useCanUndo, useCanRedo } from './store/useSelector';
 
-const cx = classNames.bind(productionStyles);
+import classNames from 'classnames/bind';
+import jobShopStyles from '../css/JobShop.module.css';
 
+const cx = classNames.bind(jobShopStyles);
 const iconButtonStyle = { width: 36, height: 36, padding: 6 };
 
 const Undo = () => {
-  const dispatch = useContext(ProductionDispatchContext);
+  const dispatch = useContext(JobShopDispatchContext);
   const undoCallback = useCallback(() => dispatch(ActionCreators.undo()), [dispatch]);
   const canUndo = useCanUndo();
   return (
@@ -28,7 +28,7 @@ const Undo = () => {
 };
 
 const Redo = () => {
-  const dispatch = useContext(ProductionDispatchContext);
+  const dispatch = useContext(JobShopDispatchContext);
   const redoCallback = useCallback(() => dispatch(ActionCreators.redo()), [dispatch]);
   const canRedo = useCanRedo();
   return (
@@ -42,13 +42,13 @@ const Redo = () => {
   )
 };
 
-const ProductionToolbar = () => {
+const Toolbar = () => {
   return (
-    <div className={cx("production__toolbar")}>
+    <div className={cx("job-shop__toolbar")}>
       <Undo />
       <Redo />
     </div>
   );
 };
 
-export default ProductionToolbar;
+export default Toolbar;

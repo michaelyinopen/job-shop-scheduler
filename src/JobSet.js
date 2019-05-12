@@ -1,18 +1,19 @@
 import React, { useEffect } from 'react';
 import { DropTarget } from 'react-dnd';
-import ProductionJob from './ProductionJob';
+import Job from './Job';
 import { useJobIds } from './store/useSelector';
 import itemTypes from './dragDrop/itemTypes';
 import dropResultTypes from './dragDrop/dropResultTypes';
 import classNames from 'classnames/bind';
-import productionStyles from '../css/Production.module.css';
 import {
   useRemoveTask,
   usePreviewRemoveTask,
   useCancelPreviewRemove
 } from './store/useActionsDispatchers';
 
-const cx = classNames.bind(productionStyles);
+import jobShopStyles from '../css/JobShop.module.css';
+
+const cx = classNames.bind(jobShopStyles);
 
 const jobSetTarget = {
   drop(props, monitor) {
@@ -38,7 +39,7 @@ function collect(connect, monitor) {
     isOver: monitor.isOver(),
   }
 }
-const ProductionJobSet = React.memo(({
+const JobSet = React.memo(({
   jobIds,
   previewRemoveTask,
   cancelPreviewRemove,
@@ -58,21 +59,21 @@ const ProductionJobSet = React.memo(({
     [canDrop && isOver]
   );
   return connectDropTarget(
-    <ol className={cx("production__job-set-list")}>
-      {jobIds.map(jId => <li key={jId}><ProductionJob id={jId} /></li>)}
+    <ol className={cx("job-shop__job-set-list")}>
+      {jobIds.map(jId => <li key={jId}><Job id={jId} /></li>)}
     </ol>
   );
 });
 
-const ProductionJobSetDropTarget = DropTarget([itemTypes.TASK], jobSetTarget, collect)(ProductionJobSet)
+const JobSetDropTarget = DropTarget([itemTypes.TASK], jobSetTarget, collect)(JobSet)
 
-const ProductionJobSetContainer = () => {
+const JobSetContainer = () => {
   const jobIds = useJobIds();
   const removeTask = useRemoveTask();
   const previewRemoveTask = usePreviewRemoveTask();
   const cancelPreviewRemove = useCancelPreviewRemove();
   return (
-    <ProductionJobSetDropTarget
+    <JobSetDropTarget
       jobIds={jobIds}
       removeTask={removeTask}
       previewRemoveTask={previewRemoveTask}
@@ -81,4 +82,4 @@ const ProductionJobSetContainer = () => {
   );
 };
 
-export default ProductionJobSetContainer;
+export default JobSetContainer;

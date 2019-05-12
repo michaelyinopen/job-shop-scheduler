@@ -9,11 +9,11 @@ import CustomPopper from './CustomPopper';
 
 import { useProcedure, useJobColor } from './store/useSelector';
 import classNames from 'classnames/bind';
-import productionStyles from '../css/Production.module.css';
+import jobShopStyles from '../css/JobShop.module.css';
 
-const cx = classNames.bind(productionStyles);
+const cx = classNames.bind(jobShopStyles);
 
-const productionProcedureSource = {
+const procedureSource = {
   beginDrag(props) {
     const { setIsDragging } = props;
     setIsDragging(true);
@@ -36,7 +36,7 @@ const collect = (connect, monitor) => {
   }
 };
 
-const ProductionProcedure = ({
+const Procedure = ({
   id,
   connectDragSource,
   isDragging,
@@ -52,10 +52,10 @@ const ProductionProcedure = ({
   return connectDragSource(
     <div
       className={cx(
-        { "production__procedure": true },
-        { "production__procedure--assigned": assignedTask },
-        { "production__procedure--is-dragging": isDragging },
-        { "production__procedure--preview-assigned": false }
+        { "job-shop__procedure": true },
+        { "job-shop__procedure--assigned": assignedTask },
+        { "job-shop__procedure--is-dragging": isDragging },
+        { "job-shop__procedure--preview-assigned": false }
       )}
       style={{
         width: `${width}px`,
@@ -64,22 +64,22 @@ const ProductionProcedure = ({
       onMouseEnter={handlePopperOpen}
       onMouseLeave={handlePopperClose}
     >
-      <div className={cx("production__machine-label")}>M{procedure.machineId}</div>
+      <div className={cx("job-shop__machine-label")}>M{procedure.machineId}</div>
       <div
-        className={cx("production__job-label")}
+        className={cx("job-shop__job-label")}
         style={{ color: foregroundColor }}
       >
         {procedure.jobId}
       </div>
-      <div className={cx("production__sequence-label")}>{procedure.sequence}</div>
+      <div className={cx("job-shop__sequence-label")}>{procedure.sequence}</div>
       {!isDragging ? popper : null}
     </div>
   );
 };
 
-const ProductionProcedureDragSource = React.memo(DragSource(itemTypes.PROCEDURE, productionProcedureSource, collect)(ProductionProcedure));
+const ProcedureDragSource = React.memo(DragSource(itemTypes.PROCEDURE, procedureSource, collect)(Procedure));
 
-const ProductionProcedureContainer = ({
+const ProcedureContainer = ({
   id
 }) => {
   const setIsDragging = useSetIsDragging();
@@ -97,7 +97,7 @@ const ProductionProcedureContainer = ({
   //#region popper
   const popperContent = useMemo(
     () => (
-      <div className={cx("production__procedure-popper-content")}>
+      <div className={cx("job-shop__procedure-popper-content")}>
         Machine Id: {procedure.machineId}<br />
         Job Id: {procedure.jobId}<br />
         Sequence in job: {procedure.sequence}<br />
@@ -120,7 +120,7 @@ const ProductionProcedureContainer = ({
   );
   //#endregion popper
   return (
-    <ProductionProcedureDragSource
+    <ProcedureDragSource
       id={id}
       setIsDragging={setIsDragging}
       procedure={procedure}
@@ -134,4 +134,4 @@ const ProductionProcedureContainer = ({
   );
 };
 
-export default ProductionProcedureContainer;
+export default ProcedureContainer;

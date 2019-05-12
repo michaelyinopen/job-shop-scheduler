@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 import { DragDropContextProvider } from 'react-dnd';
 import html5Backend from 'react-dnd-html5-backend';
 
-import { ProductionScheduleEditor } from '../../src'
+import { JobShopScheduler } from '../../src'
 import '../css/index.css';
 
 const referenceDate = new Date(2019, 0, 1);
@@ -51,22 +51,20 @@ const jobs = [
   },
 ];
 
-class Demo extends Component {
-  render() {
-    return (
-      <DragDropContextProvider backend={html5Backend}>
-        <div>
-          <h1>@michaelyin/job-shop-scheduler Demo</h1>
-          <ProductionScheduleEditor
-            timeOptions={timeOptions}
-            referenceDate={referenceDate}
-            machines={machines}
-            jobs={jobs}
-          />
-        </div>
-      </DragDropContextProvider>
-    );
-  }
-}
+const Demo = () => {
+  return (
+    <DragDropContextProvider backend={html5Backend}>
+      <div>
+        <h1>@michaelyin/job-shop-scheduler Demo</h1>
+        <JobShopScheduler
+          timeOptions={timeOptions}
+          referenceDate={referenceDate}
+          machines={machines}
+          jobs={jobs}
+        />
+      </div>
+    </DragDropContextProvider>
+  );
+};
 
 render(<Demo />, document.querySelector('#demo'))

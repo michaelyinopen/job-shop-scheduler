@@ -4,23 +4,23 @@ import usePopperHandlers from './usePopperHandlers';
 import CustomPopper from './CustomPopper';
 import { DoneOutline, TurnedInNot, TurnedIn, Error } from '@material-ui/icons';
 import { Tooltip } from '@material-ui/core';
-import ProductionJobButton from './ProductionJobButton';
+import JobButton from './JobButton';
 
 import classNames from 'classnames/bind';
-import productionStyles from '../css/Production.module.css';
+import jobShopStyles from '../css/JobShop.module.css';
 
-const cx = classNames.bind(productionStyles);
+const cx = classNames.bind(jobShopStyles);
 
-const ProductionProcedureConflicts = ({
+const ProcedureConflicts = ({
   violationMessages,
   isLast
 }) => {
   return (
     <ul
       className={cx(
-        "production__conflicts-list",
-        "production__conflicts-list--grow",
-        { "production__conflicts-list--with-separator": !isLast },
+        "job-shop__conflicts-list",
+        "job-shop__conflicts-list--grow",
+        { "job-shop__conflicts-list--with-separator": !isLast },
       )}
     >
       {violationMessages.map((m, index) => <li key={index}>{m}</li>)}
@@ -28,7 +28,7 @@ const ProductionProcedureConflicts = ({
   );
 };
 
-const ProductionProcedureStatus = ({
+const ProcedureStatus = ({
   procedureStatus,
   isLast
 }) => {
@@ -39,11 +39,11 @@ const ProductionProcedureStatus = ({
 
   return (
     <li key={procedureStatus.sequence}>
-      <div className={cx("production__job-status-popper-element")}>
-        <div className={cx("production__sequence-label")} style={{ margin: 0 }}>{procedureStatus.sequence}</div>
+      <div className={cx("job-shop__job-status-popper-element")}>
+        <div className={cx("job-shop__sequence-label")} style={{ margin: 0 }}>{procedureStatus.sequence}</div>
         {iconWithTooltip}
         {procedureStatus.assigned && !procedureStatus.feasible ?
-          <ProductionProcedureConflicts
+          <ProcedureConflicts
             violationMessages={procedureStatus.violationMessages}
             isLast={isLast}
           />
@@ -54,7 +54,7 @@ const ProductionProcedureStatus = ({
   );
 };
 
-const ProductionJobStatusButton = ({
+const JobStatusButton = ({
   id
 }) => {
   const [feasible, allAssigned, procedureStatuses] = useJobStatus(id);
@@ -80,9 +80,9 @@ const ProductionJobStatusButton = ({
   const popperContent = useMemo(
     () => {
       return (
-        <ol className={cx("production__job-status-popper-list")}>
+        <ol className={cx("job-shop__job-status-popper-list")}>
           {procedureStatuses.map((ps, index) => (
-            <ProductionProcedureStatus
+            <ProcedureStatus
               key={ps.sequence}
               procedureStatus={ps}
               isLast={index === procedureStatuses.length - 1}
@@ -110,7 +110,7 @@ const ProductionJobStatusButton = ({
   //#endregion popper
 
   return (
-    <ProductionJobButton
+    <JobButton
       open={open}
       handlePopperOpen={handlePopperOpen}
       handlePopperClose={handlePopperClose}
@@ -121,4 +121,4 @@ const ProductionJobStatusButton = ({
   )
 };
 
-export default ProductionJobStatusButton;
+export default JobStatusButton;

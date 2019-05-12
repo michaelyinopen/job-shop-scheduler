@@ -10,14 +10,14 @@ import CustomPopper from './CustomPopper';
 
 import { Error as ErrorIcon, ExpandLess } from '@material-ui/icons';
 import { Fab, IconButton } from '@material-ui/core';
-
-import classNames from 'classnames/bind';
-import productionStyles from '../css/Production.module.css';
 import useTaskFeasible from './store/useTaskFeasible';
 
-const cx = classNames.bind(productionStyles);
+import classNames from 'classnames/bind';
+import jobShopStyles from '../css/JobShop.module.css';
 
-const productionTaskSource = {
+const cx = classNames.bind(jobShopStyles);
+
+const taskSource = {
   beginDrag(props) {
     const { id, task, setIsDragging } = props;
     setIsDragging(true);
@@ -40,7 +40,7 @@ const collect = (connect, monitor) => {
   }
 };
 
-const ProductionTask = ({
+const Task = ({
   id,
   task,
   backgroundColor,
@@ -55,12 +55,12 @@ const ProductionTask = ({
   popover
 }) => {
   return connectDragSource(
-    <div className={cx("production__task-outer")}>
+    <div className={cx("job-shop__task-outer")}>
       <div
         className={cx(
-          { "production__task": true },
-          { "production__task--preview": isPreview },
-          { "production__task--preview-remove": isPreviewRemove }
+          { "job-shop__task": true },
+          { "job-shop__task--preview": isPreview },
+          { "job-shop__task--preview-remove": isPreviewRemove }
         )}
         style={{
           backgroundColor: backgroundColor
@@ -68,18 +68,18 @@ const ProductionTask = ({
         onMouseEnter={handlePopperOpen}
         onMouseLeave={handlePopperClose}
       >
-        <div className={cx("production__machine-label")}>M{task.machineId}</div>
+        <div className={cx("job-shop__machine-label")}>M{task.machineId}</div>
         <div
-          className={cx("production__job-label")}
+          className={cx("job-shop__job-label")}
           style={{ color: foregroundColor }}
         >
           {task.jobId}
         </div>
-        <div className={cx("production__sequence-label")}>{task.sequence}</div>
+        <div className={cx("job-shop__sequence-label")}>{task.sequence}</div>
         {!feasible ? (
-          <div className={cx("production__infeasible-label")} >
+          <div className={cx("job-shop__infeasible-label")} >
             <IconButton onClick={handlePopperOpen} style={{ padding: "3px" }}>
-              <div className={cx("production__infeasible-icon-wrapper")}>
+              <div className={cx("job-shop__infeasible-icon-wrapper")}>
                 <ErrorIcon color="error" />
               </div>
             </IconButton>
@@ -88,9 +88,9 @@ const ProductionTask = ({
         {isDragging ? null : popover}
         <div
           className={cx(
-            { "production__task-overlay-infeasible": !feasible },
-            { "production__task-overlay-infeasible--preview": isPreview },
-            { "production__task-overlay-infeasible--preview-remove": isPreviewRemove },
+            { "job-shop__task-overlay-infeasible": !feasible },
+            { "job-shop__task-overlay-infeasible--preview": isPreview },
+            { "job-shop__task-overlay-infeasible--preview-remove": isPreviewRemove },
           )}
         />
       </div>
@@ -98,9 +98,9 @@ const ProductionTask = ({
   );
 };
 
-const ProductionTaskDragSource = DragSource(itemTypes.TASK, productionTaskSource, collect)(ProductionTask);
+const TaskDragSource = DragSource(itemTypes.TASK, taskSource, collect)(Task);
 
-const ProductionTaskContainer = ({
+const TaskContainer = ({
   id
 }) => {
   const task = usePreviewAppliedTask(id);
@@ -120,13 +120,13 @@ const ProductionTaskContainer = ({
   const popperContent = useMemo(
     () => (
       <div
-        className={cx("production__task-popper-content")}
+        className={cx("job-shop__task-popper-content")}
       >
         {!feasible ? (
           <React.Fragment>
             <Fab onClick={forcePopperClose} size="small"><ExpandLess /></Fab>
             <span style={{ color: "red", fontWeight: "bold", fontSize: "28px", verticalAlign: "middle" }}>Conflicts</span>
-            <ul className={cx("production__conflicts-list")}>
+            <ul className={cx("job-shop__conflicts-list")}>
               {violationMessages.map(m => <li>{m}</li>)}
             </ul>
             <hr />
@@ -165,7 +165,7 @@ const ProductionTaskContainer = ({
   );
   //#endregion popper
   return (
-    <ProductionTaskDragSource
+    <TaskDragSource
       id={id}
       task={task}
       backgroundColor={backgroundColor}
@@ -181,4 +181,4 @@ const ProductionTaskContainer = ({
   );
 };
 
-export default ProductionTaskContainer;
+export default TaskContainer;

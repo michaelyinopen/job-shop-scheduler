@@ -1,7 +1,6 @@
 import {
   setPreviewTaskIdsReducer,
-  initialProceduresHistory,
-  clearPreviewTasksWhenNotDraggingReducer
+  initialProceduresHistory
 } from './reducer';
 
 describe('setPreviewTaskIdsReducer', () => {

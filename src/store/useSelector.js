@@ -1,5 +1,5 @@
 import { useContext, useMemo } from 'react';
-import ProductionStateContext from '../ProductionStateContext';
+import JobShopStateContext from '../JobShopStateContext';
 import { addMilliseconds } from 'date-fns/fp';
 import { memoize } from 'lodash';
 import { itemInitialState as timelineItemInitialState } from '@michaelyin/timeline';
@@ -7,7 +7,7 @@ import { proceduresSelector, previewTasksSelector } from './selectors';
 import { originalTaskMode } from './reducer';
 
 export const useJobIds = () => {
-  const state = useContext(ProductionStateContext);
+  const state = useContext(JobShopStateContext);
   const sortedJobIds = useMemo(
     () => state.jobs.map(j => j.id).sort((a, b) => a - b),
     [state.jobs]
@@ -16,18 +16,18 @@ export const useJobIds = () => {
 };
 
 export const useJob = id => {
-  const state = useContext(ProductionStateContext);
+  const state = useContext(JobShopStateContext);
   return state.jobs.find(j => j.id === id);
 };
 
 export const useProcedures = () => {
-  const state = useContext(ProductionStateContext);
+  const state = useContext(JobShopStateContext);
   const procedures = proceduresSelector(state);
   return procedures;
 };
 
 export const useProcedureIdsOfJob = jobId => {
-  const state = useContext(ProductionStateContext);
+  const state = useContext(JobShopStateContext);
   const procedures = proceduresSelector(state);
   const sortedProcedureIds = useMemo(
     () => procedures
@@ -40,14 +40,14 @@ export const useProcedureIdsOfJob = jobId => {
 };
 
 export const useProcedure = id => {
-  const state = useContext(ProductionStateContext);
+  const state = useContext(JobShopStateContext);
   const procedures = proceduresSelector(state);
   return procedures.find(p => p.id === id);
 };
 
 export const hasMillisecondsFromStart = p => Boolean(p.millisecondsFromStart || p.millisecondsFromStart === 0);
 export const useTasks = () => {
-  const state = useContext(ProductionStateContext);
+  const state = useContext(JobShopStateContext);
   const procedures = proceduresSelector(state);
   const tasks = procedures.filter(hasMillisecondsFromStart);
   return tasks;
@@ -59,17 +59,17 @@ export const useTask = procedureId => {
 };
 
 export const useIsDragging = () => {
-  const state = useContext(ProductionStateContext);
+  const state = useContext(JobShopStateContext);
   return state.isDragging;
 };
 
 export const useCanUndo = () => {
-  const state = useContext(ProductionStateContext);
+  const state = useContext(JobShopStateContext);
   return state.procedures.past.length > 0;
 };
 
 export const useCanRedo = () => {
-  const state = useContext(ProductionStateContext);
+  const state = useContext(JobShopStateContext);
   return state.procedures.future.length > 0;
 };
 
@@ -114,7 +114,7 @@ const getPreviewAppliedProcedures = (procedures, previewTasks) => {
 }
 
 export const usePreviewAppliedProcedures = () => {
-  const state = useContext(ProductionStateContext);
+  const state = useContext(JobShopStateContext);
   const procedures = proceduresSelector(state);
   const previewTasks = previewTasksSelector(state);
   const proceduresOfJob = useMemo(
@@ -127,7 +127,7 @@ export const usePreviewAppliedProcedures = () => {
 };
 
 export const usePreviewAppliedTask = id => {
-  const state = useContext(ProductionStateContext);
+  const state = useContext(JobShopStateContext);
   const procedures = proceduresSelector(state);
   const previewTasks = previewTasksSelector(state);
   const result = useMemo(
@@ -267,7 +267,7 @@ export const usePreviewAppliedTimelineItems = (procedures, previewTasks, referen
 
 // returns [backgroundColor, textColor]
 export const useJobColor = id => {
-  const state = useContext(ProductionStateContext);
+  const state = useContext(JobShopStateContext);
   const jobColor = state.jobColors.find(jc => jc.id === id);
   if (jobColor) {
     return [jobColor.color, jobColor.textColor];

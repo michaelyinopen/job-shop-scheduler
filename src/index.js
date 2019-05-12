@@ -1,1 +1,1 @@
-export { default as ProductionScheduleEditor } from './ProductionScheduleEditor';
+export { default as JobShopScheduler } from './JobShopScheduler';

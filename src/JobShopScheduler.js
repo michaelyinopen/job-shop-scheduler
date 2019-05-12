@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+
 //WithContext
 import {
   TimelineDispatchContext,
@@ -6,8 +7,7 @@ import {
   TimelineGroupsStateContext,
   TimelineItemsStateContext,
 } from '@michaelyin/timeline';
-
-import productionReducer, { init as productionInit } from './store/reducer';
+import jobShopReducer, { init as jobShopInit } from './store/reducer';
 import {
   timelineStateSelector,
   timelineGroupsSelector,
@@ -16,8 +16,9 @@ import {
   previewTasksSelector,
 } from './store/selectors';
 import { usePreviewAppliedTimelineItems } from './store/useSelector';
-import ProductionDispatchContext from './ProductionDispatchContext';
-import ProductionStateContext from './ProductionStateContext';
+import JobShopDispatchContext from './JobShopDispatchContext';
+import JobShopStateContext from './JobShopStateContext';
+
 //Presentation
 import {
   ControlledTimeline,
@@ -26,21 +27,19 @@ import {
   ScheduleContainer,
   TimeAxis,
 } from '@michaelyin/timeline';
-import ProductionTask from './ProductionTask';
+import Task from './Task';
 import MachineLane from './MachineLane';
+import JobSet from './JobSet';
+import Toolbar from './Toolbar';
 
-import ProductionJobSet from './ProductionJobSet';
-
-import ProductionToolbar from './ProductionToolbar';
-
-const ProductionScheuldeEditor = React.memo(() => {
+const JobShopScheduler = React.memo(() => {
   return (
     <React.Fragment>
-      <ProductionToolbar />
-      <ProductionJobSet />
+      <Toolbar />
+      <JobSet />
       <br />
       <ControlledTimeline
-        itemComponent={ProductionTask}
+        itemComponent={Task}
         groupComponent={MachineLane}
       >
         <TimelineContent>
@@ -60,14 +59,14 @@ const withContext = WrappedComponent => ({
   timeOptions,
 }) => {
   const [state, dispatch] = useReducer(
-    productionReducer,
+    jobShopReducer,
     {
       machines,
       jobs,
       referenceDate,
       timeOptions
     },
-    productionInit
+    jobShopInit
   );
   const timelineState = timelineStateSelector(state);
   const timelineGroups = timelineGroupsSelector(state);
@@ -77,8 +76,8 @@ const withContext = WrappedComponent => ({
   const timelineItemsWithPreview = usePreviewAppliedTimelineItems(procedures, previewTasks, referenceDateFromState);
 
   return (
-    <ProductionDispatchContext.Provider value={dispatch}>
-      <ProductionStateContext.Provider value={state}>
+    <JobShopDispatchContext.Provider value={dispatch}>
+      <JobShopStateContext.Provider value={state}>
         <TimelineDispatchContext.Provider value={dispatch}>
           <TimelineStateContext.Provider value={timelineState}>
             <TimelineGroupsStateContext.Provider value={timelineGroups}>
@@ -88,10 +87,9 @@ const withContext = WrappedComponent => ({
             </TimelineGroupsStateContext.Provider>
           </TimelineStateContext.Provider>
         </TimelineDispatchContext.Provider>
-      </ProductionStateContext.Provider>
-    </ProductionDispatchContext.Provider>
+      </JobShopStateContext.Provider>
+    </JobShopDispatchContext.Provider>
   );
 };
 
-
-export default withContext(ProductionScheuldeEditor);
+export default withContext(JobShopScheduler);

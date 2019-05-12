@@ -4,13 +4,13 @@ import usePopperHandlers from './usePopperHandlers';
 import CustomPopper from './CustomPopper';
 import { MoreHoriz, Autorenew } from '@material-ui/icons';
 import { Tooltip, IconButton } from '@material-ui/core';
-import ProductionJobButton from './ProductionJobButton';
+import JobButton from './JobButton';
 import { useChangeJobColor } from './store/useActionsDispatchers';
 
 import classNames from 'classnames/bind';
-import productionStyles from '../css/Production.module.css';
+import jobShopStyles from '../css/JobShop.module.css';
 
-const cx = classNames.bind(productionStyles);
+const cx = classNames.bind(jobShopStyles);
 
 const ColorOption = ({
   backgroundColor,
@@ -24,7 +24,7 @@ const ColorOption = ({
           </h4>
       <div style={{ display: "inline-flex", alignItems: "center" }}>
         <div
-          className={cx("production__job-options-color-box")}
+          className={cx("job-shop__job-options-color-box")}
           style={{ backgroundColor: backgroundColor, color: foregroundColor, fontFamily: "monospace, monospace" }}
         >
           background: {backgroundColor}<br />
@@ -43,7 +43,7 @@ const ColorOption = ({
   );
 };
 
-const ProductionJobOptionsButton = ({
+const JobOptionsButton = ({
   id
 }) => {
   const [backgroundColor, foregroundColor] = useJobColor(id);
@@ -75,11 +75,11 @@ const ProductionJobOptionsButton = ({
   const popperContent = useMemo(
     () => {
       return (
-        <article className={cx("production__job-options-popper-content")}>
+        <article className={cx("job-shop__job-options-popper-content")}>
           <h3>
             Job
             <span
-              className={cx("production__job-options-header-color-box")}
+              className={cx("job-shop__job-options-header-color-box")}
               style={{ backgroundColor: backgroundColor, color: foregroundColor }}
             >
               {id}
@@ -109,7 +109,7 @@ const ProductionJobOptionsButton = ({
   //#endregion popper
 
   return (
-    <ProductionJobButton
+    <JobButton
       open={open}
       handlePopperOpen={handlePopperOpen}
       handlePopperClose={handlePopperClose}
@@ -120,4 +120,4 @@ const ProductionJobOptionsButton = ({
   )
 };
 
-export default ProductionJobOptionsButton;
+export default JobOptionsButton;

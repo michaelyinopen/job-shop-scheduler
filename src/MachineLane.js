@@ -4,7 +4,6 @@ import itemTypes from './dragDrop/itemTypes';
 import dropResultTypes from './dragDrop/dropResultTypes';
 
 import classNames from 'classnames/bind';
-import productionStyles from '../css/Production.module.css';
 import useLeftAtBeginDrag from './store/useLeftAtBeginDrag';
 import {
   useMoveProcedureToMacheineLane,
@@ -13,7 +12,9 @@ import {
   useCancelPreviewFromMachineLane,
   usePreviewMoveTask,
 } from './store/useActionsDispatchers';
-const cx = classNames.bind(productionStyles);
+import jobShopStyles from '../css/JobShop.module.css';
+
+const cx = classNames.bind(jobShopStyles);
 
 const machineLaneTarget = {
   canDrop(props, monitor) {
@@ -137,9 +138,9 @@ const MachineLane = ({
     <div
       ref={machineLaneRef}
       className={cx({
-        "production__machine-lane": true,
-        "production__machine-lane--can-drop": isMachineOfProcedure && !isOver,
-        "production__machine-lane--over-drop": isMachineOfProcedure && isOver,
+        "job-shop__machine-lane": true,
+        "job-shop__machine-lane--can-drop": isMachineOfProcedure && !isOver,
+        "job-shop__machine-lane--over-drop": isMachineOfProcedure && isOver,
       })}
     >
       {children}

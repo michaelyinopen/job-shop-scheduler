@@ -4,7 +4,7 @@ import { throttle } from 'lodash';
 import { previewThrottleWait } from '../constants';
 import { useMinTime, useLeftToTimeFunc } from '@michaelyin/timeline';
 
-import ProductionDispatchContext from '../ProductionDispatchContext';
+import JobShopDispatchContext from '../JobShopDispatchContext';
 import {
   setIsDragging,
   createTask,
@@ -23,7 +23,7 @@ import {
 const roundToMinute = milliseconds => Math.round(milliseconds / 60000) * 60000;
 
 export const useSetIsDragging = () => {
-  const dispatch = useContext(ProductionDispatchContext);
+  const dispatch = useContext(JobShopDispatchContext);
   const setIsDraggingCallback = useMemo(
     () => isDragging => {
       const action = setIsDragging(isDragging);
@@ -35,7 +35,7 @@ export const useSetIsDragging = () => {
 };
 
 export const useMoveProcedureToMacheineLane = () => {
-  const dispatch = useContext(ProductionDispatchContext);
+  const dispatch = useContext(JobShopDispatchContext);
   const leftToTimeFunc = useLeftToTimeFunc();
   const minTime = useMinTime();
   const moveProcedureToMacheineLane = useMemo(
@@ -57,7 +57,7 @@ export const useMoveProcedureToMacheineLane = () => {
 // so that the undo history does not get bloated
 // maybe undo custom filter
 export const useMoveTaskOnMacheineLane = () => {
-  const dispatch = useContext(ProductionDispatchContext);
+  const dispatch = useContext(JobShopDispatchContext);
   const leftToTimeFunc = useLeftToTimeFunc();
   const minTime = useMinTime();
   const moveProcedureToMacheineLane = useMemo(
@@ -79,7 +79,7 @@ export const useMoveTaskOnMacheineLane = () => {
 };
 
 export const useRemoveTask = () => {
-  const dispatch = useContext(ProductionDispatchContext);
+  const dispatch = useContext(JobShopDispatchContext);
   const removeTask = useMemo(
     () => (procedureId) => {
       dispatch(deleteTask(procedureId));
@@ -90,7 +90,7 @@ export const useRemoveTask = () => {
 };
 
 export const usePreviewAssignProcedure = () => {
-  const dispatch = useContext(ProductionDispatchContext);
+  const dispatch = useContext(JobShopDispatchContext);
   const leftToTimeFunc = useLeftToTimeFunc();
   const minTime = useMinTime();
   const previewAssignProcedureCallback = useMemo(
@@ -128,7 +128,7 @@ export const usePreviewAssignProcedure = () => {
 };
 
 export const usePreviewMoveTask = () => {
-  const dispatch = useContext(ProductionDispatchContext);
+  const dispatch = useContext(JobShopDispatchContext);
   const leftToTimeFunc = useLeftToTimeFunc();
   const minTime = useMinTime();
   const previewMoveTaskCallback = useMemo(
@@ -167,7 +167,7 @@ export const usePreviewMoveTask = () => {
 
 
 export const usePreviewRemoveTask = () => {
-  const dispatch = useContext(ProductionDispatchContext);
+  const dispatch = useContext(JobShopDispatchContext);
   const previewRemoveTaskCallback = useMemo(
     () => (procedureId) => {
       dispatch(previewRemoveTask(
@@ -199,7 +199,7 @@ export const usePreviewRemoveTask = () => {
 };
 
 export const useCancelPreviewFromMachineLane = machineLaneId => {
-  const dispatch = useContext(ProductionDispatchContext);
+  const dispatch = useContext(JobShopDispatchContext);
   const cancelPreviewFromMachineLaneCallback = useMemo(
     () => () => {
       dispatch(cancelPreviewFromMachineLane(
@@ -213,7 +213,7 @@ export const useCancelPreviewFromMachineLane = machineLaneId => {
 };
 
 export const useCancelPreviewRemove = () => {
-  const dispatch = useContext(ProductionDispatchContext);
+  const dispatch = useContext(JobShopDispatchContext);
   const cancelPreviewRemoveCallback = useMemo(
     () => () => {
       dispatch(cancelPreviewRemove());
@@ -225,7 +225,7 @@ export const useCancelPreviewRemove = () => {
 };
 
 export const useChangeJobColor = id => {
-  const dispatch = useContext(ProductionDispatchContext);
+  const dispatch = useContext(JobShopDispatchContext);
   const changeJobColorCallback = useMemo(
     () => () => {
       dispatch(changeJobColor(id));

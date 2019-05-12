@@ -3,7 +3,7 @@ import { throttle } from 'lodash';
 import { iconButtonPopperClosingWait } from './constants';
 import { IconButton, Tooltip } from '@material-ui/core';
 
-const ProductionJobIconButton = ({
+const JobIconButton = ({
   icon,
   title,
   popper,
@@ -26,7 +26,7 @@ const ProductionJobIconButton = ({
   )
 };
 
-const ProductionJobButton = ({
+const JobButton = ({
   open,
   handlePopperOpen,
   handlePopperClose,
@@ -80,7 +80,7 @@ const ProductionJobButton = ({
   //#endregion onMouseEnter
 
   return (
-    <ProductionJobIconButton
+    <JobIconButton
       icon={icon}
       title={title}
       popper={popper}
@@ -90,4 +90,4 @@ const ProductionJobButton = ({
     />
   )
 };
-export default React.memo(ProductionJobButton);
+export default React.memo(JobButton);
