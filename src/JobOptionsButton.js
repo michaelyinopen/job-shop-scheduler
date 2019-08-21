@@ -33,7 +33,7 @@ const ColorOption = ({
         <Tooltip title="Change color">
           <IconButton
             onClick={changeJobColor}
-            style={{ padding: 5, width: "34px", height: "34px", boxSizing: "border-box;" }}
+            style={{ padding: 5, width: "34px", height: "34px", boxSizing: "border-box" }}
           >
             <Autorenew />
           </IconButton>
