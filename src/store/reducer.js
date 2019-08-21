@@ -346,7 +346,8 @@ const jobColors = createReducer(
       const excludeColors = state.map(jc => jc.color);
       return state.map(jc => {
         if (jc.id === id) {
-          const [color, textColor] = getNewColor(excludeColors);
+          const currentColor = jc.color;
+          const [color, textColor] = getNewColor(excludeColors, currentColor);
           return jobColor(id)(jc, action, { color, textColor })
         }
         return jc;

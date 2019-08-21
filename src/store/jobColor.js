@@ -21,7 +21,6 @@ const colors = [
   '#000075',
   '#a9a9a9',
 ];
-const colorsReversed = [...colors].reverse();
 
 // taken from https://stackoverflow.com/questions/3942878/how-to-decide-font-color-in-white-or-black-depending-on-background-color
 function pickTextColorBasedOnBgColorAdvanced(bgColor, lightColor = '#ffffff', darkColor = '#000000') {
@@ -49,23 +48,39 @@ function getRandomColor() {
   return color;
 };
 
-const getAvailableindex = excludeColors => {
-  const usedIndex = colorsReversed.findIndex(c => excludeColors.includes(c));
-  // if no color is used, or the last color is used (loop around)
-  // return first available color from start
-  if (usedIndex === 0 || usedIndex === -1) {
-    return colors.findIndex(c => !excludeColors.includes(c)); // returns -1 if no color is available
-  }
-  const availableIndexOfReversed = usedIndex - 1;
-  return colorsReversed.length - availableIndexOfReversed - 1;
-}
-
-const getNewColor = (excludeColors = []) => {
-  const availabeIndex = getAvailableindex(excludeColors);
-  let resultColor = availabeIndex !== -1 ? colors[availabeIndex] : getRandomColor();
+function getRandomColorWithExclusion(excludeColors) {
+  let resultColor;
+  resultColor = getRandomColor();
   while (excludeColors.includes(resultColor)) {
     resultColor = getRandomColor();
   };
+  return resultColor;
+}
+
+function selectFromAvailableColors(excludeColors, availableColors, currentColor) {
+  if (availableColors.length === 0) {
+    return getRandomColorWithExclusion(excludeColors);
+  }
+  if (!currentColor) {
+    return availableColors[0];
+  }
+  const currentColorIndex = availableColors.indexOf(currentColor);
+  if (currentColorIndex === -1) {
+    return availableColors[0];
+  }
+  if (currentColorIndex === availableColors.length - 1) { // at the last index
+    if (availableColors.length <= 4) {// at the last index and <=4 availableColors
+      return getRandomColorWithExclusion(excludeColors);
+    }
+    return availableColors[0];// at the last index and >4 availableColors, return first
+  }
+  return availableColors[currentColorIndex + 1];
+}
+
+const getNewColor = (excludeColors = [], currentColor) => {
+  const availableColors = colors.filter(x => x === currentColor || !excludeColors.includes(x));
+  const resultColor = selectFromAvailableColors(excludeColors, availableColors, currentColor);
+
   const textColor = pickTextColorBasedOnBgColorAdvanced(resultColor);
   return [resultColor, textColor];
 }
