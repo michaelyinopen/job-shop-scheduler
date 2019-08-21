@@ -98,9 +98,6 @@ const getTaskFeasible = (task, tasks, proceduresOfJob) => {
     ...machineViolationMessages,
     ...jobViolationMessages,
   ];
-  if (!feasible) {
-    console.log(task.Id + ":" + violationMessages.join('|'));
-  }
   return [feasible, violationMessages];
 }
 
