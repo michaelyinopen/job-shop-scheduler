@@ -18,10 +18,11 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "coverage": "jest --coverage",
-    "coverage:watch": "jest --coverage --watch"
+    "coverage:watch": "jest --coverage --watch",
+    "ghpage": "nwb build-demo && gh-pages -d demo/dist"
   },
   "dependencies": {
-    "@michaelyin/timeline": "C:\\Users\\cheung\\Desktop\\Scheduling\\timeline\\michaelyin-timeline-v1.0.1.tgz",
+    "@michaelyin/timeline": "../timeline/michaelyin-timeline-1.0.1.tgz",
     "classnames": "^2.2.6",
     "date-fns": "2.0.0-alpha.27",
     "lodash": "^4.17.11",
@@ -45,6 +46,7 @@
     "@material-ui/core": "^3.9.3",
     "@material-ui/icons": "^3.0.2",
     "babel-jest": "^24.8.0",
+    "gh-pages": "^2.1.1",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "nwb": "0.23.x",
