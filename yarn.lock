@@ -1121,6 +1121,17 @@
     prop-types "^15.6.0"
     react-is "^16.6.3"
 
+"@michaelyin/timeline@./packages/michaelyin-timeline-v1.0.1.tgz":
+  version "1.0.1"
+  resolved "./packages/michaelyin-timeline-v1.0.1.tgz#bbaf55e9c747eedec64f650961dcac25655f52ef"
+  dependencies:
+    classnames "^2.2.6"
+    date-fns "2.0.0-alpha.27"
+    lodash "^4.17.11"
+    memoize-one "^5.0.4"
+    react-resize-detector "^4.1.3"
+    redux "^4.0.1"
+
 "@michaelyin/timeline@file:./packages/michaelyin-timeline-v1.0.1.tgz":
   version "1.0.1"
   resolved "file:./packages/michaelyin-timeline-v1.0.1.tgz#a6d046c3d276fdd9181b640d7d0f08c5541c9524"
