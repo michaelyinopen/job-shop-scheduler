@@ -22,7 +22,7 @@
     "ghpage": "nwb build-demo && gh-pages -d demo/dist"
   },
   "dependencies": {
-    "@michaelyin/timeline": "../timeline/michaelyin-timeline-1.0.1.tgz",
+    "@michaelyin/timeline": "file:./packages/michaelyin-timeline-v1.0.1.tgz",
     "classnames": "^2.2.6",
     "date-fns": "2.0.0-alpha.27",
     "lodash": "^4.17.11",
