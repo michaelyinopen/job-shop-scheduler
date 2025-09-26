@@ -27,7 +27,7 @@ const Demo = () => {
   return (
     <DragDropContextProvider backend={html5Backend}>
       <div style={paddingStyle}>
-        <h1>@michaelyin/job-shop-scheduler Demo</h1>
+        <h1><a href='https://github.com/michaelyinopen/job-shop-scheduler'>@michaelyin/job-shop-scheduler</a> Demo</h1>
         <h2>{chosenSample.name}</h2>
         <p>Drag all procedures to the timeline, until they are all assigned and there are no conflicts.</p>
         <JobShopScheduler
