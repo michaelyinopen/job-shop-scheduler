@@ -481,7 +481,6 @@
     padding-bottom: 0.5em;
     margin-right: -2em;
     background: -webkit-gradient(linear, left top, right bottom, from(aliceblue), color-stop(50%, aliceblue), color-stop(50%, transparent), to(transparent));
-    background: -webkit-linear-gradient(top left, aliceblue 0%, aliceblue 50%, transparent 50%, transparent 100%);
     background: -o-linear-gradient(top left, aliceblue 0%, aliceblue 50%, transparent 50%, transparent 100%);
     background: linear-gradient(to bottom right, aliceblue 0%, aliceblue 50%, transparent 50%, transparent 100%);
 }
@@ -563,4 +562,4 @@ body {
       monospace;
   }
 
-/*# sourceMappingURL=demo.296d8681.css.map*/
+/*# sourceMappingURL=demo.3595c05f.css.map*/
